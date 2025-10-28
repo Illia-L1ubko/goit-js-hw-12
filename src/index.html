@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    </head>
+    <body>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+        <form class="form">
+            <label>
+                <input type="text" name="search-text" placeholder="Search images..." required />
+            </label>
+            <button type="submit" class="search-btn">Search</button>
+        </form>
 
-    <load src="./partials/footer.html" />
+        <span class="loader">Loading images, please wait...</span>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+        <ul class="gallery"></ul>
+
+        <button type="submit" class="load-more-btn"> Load More</button>
+
+        <script type="module" src="./main.js"></script>
+    
+    </body>
 </html>
