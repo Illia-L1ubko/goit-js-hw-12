@@ -17,16 +17,11 @@ export async function getImagesByQuery(query, isNewSearch = false) {
     image_type: "photo",
     orientation: "horizontal",
     safesearch: true,
-    per_page,
     page,
+    per_page,
   };
 
-  try {
-    const response = await axios.get(BASE_URL, { params });
-    page += 1;
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching images:", error);
-    throw error;
-  }
+  const response = await axios.get(BASE_URL, { params });
+  page += 1;
+  return response.data;
 }
